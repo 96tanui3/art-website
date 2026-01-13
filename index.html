@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Summary site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <br>　
+  <h1 class="logo">黒狸さんのまとめサイト</h1>
+  <br>　
+
+  <!-- PC用ナビ -->
+  <nav class="nav">
+    <a href="index.html">TOP</a>
+    <a href="#creation">CREATION</a>
+    <a href="Game.html">GAME</a>
+    <a href="shop.html">SHOP</a>
+    <a href="Others.html">OTHERS</a>
+  </nav>
+
+  <!-- ハンバーガー（スマホ用） -->
+  <button class="menu-btn" id="menuBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+
+<!-- スライドメニュー -->
+<nav class="slide-menu" id="slideMenu">
+
+  <button class="menu-close" id="menuClose">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+    <a href="index.html">TOP</a>
+    <a href="#creation">CREATION</a>
+      <a href="wonderland.html">　- fuck you ワンダーランド</a>
+      <a href="Konketusfd.html">　- 混血SFD</a>
+      <a href="Soredemo.html">　- それでも酸素は薄かった</a>
+      <a href="MINDCORE.html">　- MINDCORE</a>
+      <a href="ANGEL.html">　- ANGEL</a>
+    <a href="Game.html">GAME</a>
+    <a href="shop.html">SHOP</a>
+    <a href="Others.html">OTHERS</a>
+</nav>
+
+<div class="slider" id="slider">
+  <div class="slides">
+    <div class="slide"><img src="　" alt="" loading="lazy"></div>
+    <div class="slide"><img src="image/Comics.jpg" alt="" loading="lazy"></div>
+    <div class="slide"><img src="image/_I.png" alt="" loading="lazy"></div>
+    <div class="slide"><img src="image/BOOTH.jpg" alt="" loading="lazy"></div>
+  </div>
+
+  <!-- 矢印 -->
+  <button class="arrow prev" id="prev">←</button>
+  <button class="arrow next" id="next">→</button>
+
+  <!-- ドット -->
+  <div class="dots" id="dots"></div>
+</div>
+
+
+<section class="about">
+  <h2>このサイトについて</h2>
+  <p>今まで作った一次創作をまとめています。</p>
+  <p>人外と人間が共存している世界観が好きです。
+    <br>漫画やゲームなど、幅広く作っているのでよければ見てください。
+  </p> 
+  <p>⚠︎ 無断転載・AI学習を禁止しています。
+    <br>⚠︎ No unauthorized reproduction or AI training.
+  </p>
+</section>
+
+<!-- 一覧 -->
+<section class="works">
+  <div class="work">
+    <h2>ゲーム</h2>
+    <div class="thumb">
+    <img src="image/Game.PNG" alt="ゲーム一覧" loading="lazy"></div>
+    <a class="btn" href="Game.html">　　MORE ▶︎　　</a>
+  </div>
+  
+</section>
+
+<!-- 創作 -->
+<section class="character-section">
+  <h2 class="character-title">一次創作</h2>
+<section class="character-grid" id="creation">
+  <a href="wonderland.html" class="character-item">
+    <div class="character-thumb">
+      <img src="image/_W.PNG" alt="ワンダーランド" loading="lazy">
+    </div>
+    <p class="character-name"><b>fuck you<br>ワンダーランド</b></p>
+  </a>
+
+  <a href="Konketusfd.html" class="character-item">
+    <div class="character-thumb">
+      <img src="image/_K.PNG" alt="混血SFD" loading="lazy">
+    </div>
+    <p class="character-name"><b>混血SFD</b></p>
+  </a>
+
+  <a href="Soredemo.html" class="character-item">
+    <div class="character-thumb">
+      <img src="image/_S.PNG" alt="それでも酸素は" loading="lazy">
+    </div>
+    <p class="character-name"><b>それでも酸素は<br>薄かった</b></p>
+  </a>
+
+  <a href="MINDCORE.html" class="character-item">
+    <div class="character-thumb">
+      <img src="image/_M.PNG" alt="マインドコア" loading="lazy">
+    </div>
+    <p class="character-name"><b>MINDCORE</b></p>
+  </a>
+
+  <a href="ANGEL.html" class="character-item">
+    <div class="character-thumb">
+      <img src="image/_a.PNG" alt="ANGEL" loading="lazy">
+    </div>
+    <p class="character-name"><b>ANGEL</b></p>
+  </a>
+</section>
+
+<!-- ショップ -->
+<section class="works">
+  <div class="work">
+    <h2>ショップ</h2>
+    <div class="thumb">
+    <img src="image/BOOTH.jpg" alt="ショップ" loading="lazy"></div>
+    <a class="btn" href="shop.html">　　MORE ▶︎　　</a>
+  </div>
+
+  <div class="work">
+    <br>　
+    <h2>単発作品</h2>
+    <div class="thumb">
+    <img src="image/_I.png" alt="単発作品" loading="lazy"></div>
+    <a class="btn" href="Others.html">　　MORE ▶︎　　</a>
+  </div>
+</section>
+
+
+<!-- sns -->
+<section class="sns">
+  <h2>SNS</h2>
+  <div class="sns-links">
+    <a href="https://x.com/plq2lmq5rbkb5eq?s=21">X</a>
+    <a href="https://www.instagram.com/96tanuki3?igsh=MXV2azQwaHA2azJ4cg%3D%3D&utm_source=qr">Instagram</a>
+    <a href="https://www.pixiv.net/users/100416662">pixiv</a>
+  </div>
+</section>
+
+<script>
+  const slides = document.querySelector(".slides");
+  const slideCount = document.querySelectorAll(".slide").length;
+  const prev = document.getElementById("prev");
+  const next = document.getElementById("next");
+  const dotsContainer = document.getElementById("dots");
+
+  let index = 0;
+  let interval;
+
+  /* ===== ドット生成 ===== */
+  for (let i = 0; i < slideCount; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => {
+      index = i;
+      updateSlide();
+      resetAutoSlide();
+    });
+    dotsContainer.appendChild(dot);
+  }
+
+  const dots = document.querySelectorAll(".dot");
+
+  function updateSlide() {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+  }
+
+  /* ===== 次へ ===== */
+  next.addEventListener("click", () => {
+    index = (index + 1) % slideCount;
+    updateSlide();
+    resetAutoSlide();
+  });
+
+  /* ===== 前へ ===== */
+  prev.addEventListener("click", () => {
+    index = (index - 1 + slideCount) % slideCount;
+    updateSlide();
+    resetAutoSlide();
+  });
+
+  /* ===== 自動スライド ===== */
+  function startAutoSlide() {
+    interval = setInterval(() => {
+      index = (index + 1) % slideCount;
+      updateSlide();
+    }, 4000);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(interval);
+    startAutoSlide();
+  }
+
+  startAutoSlide();
+</script>
+
+<script>
+  
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("slideMenu");
+
+  const closeBtn = document.getElementById("menuClose");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
+</script>
+
+
+<!-- <script src="script.js"></script> -->
+</body>
+</html>
+
