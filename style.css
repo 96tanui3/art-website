@@ -1,0 +1,373 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #DDDAD0;
+  color: #57564F;
+}
+
+.header {
+  background: #fff;
+  padding: 90px;
+  position: relative;
+
+  z-index: 100;
+}
+
+
+.logo {
+  margin: 0;
+  text-align: center;
+}
+
+.nav {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;       /* ← ここで微調整 */
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #57564F;
+}
+
+/* ===== ハンバーガー ===== */
+.menu-btn {
+  display: none;
+  position: fixed;
+  top: 25px;
+  right: 20px;
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 3000;
+}
+
+.menu-btn span {
+  display: block;
+  height: 4px;
+  background: #57564F;
+  margin-bottom: 5px;
+  border-radius: 2px;
+}
+
+/* ===== スライドメニュー本体 ===== */
+.slide-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100vh;
+  background: #fff;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  /* ここが重要 */
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+
+  z-index: 1000;
+}
+
+/* 開いた状態 */
+.slide-menu.active {
+  transform: translateX(0);
+}
+
+/* 閉じる用（三） */
+.menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* 三本線の見た目を共通化 */
+.menu-btn span,
+.menu-close span {
+  display: block;
+  height: 4px;
+  background: #57564F;
+  margin-bottom: 5px;
+  border-radius: 2px;
+}
+
+
+.hero {
+  background: #000;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.about {
+  padding: 60px 20px;
+
+  text-align: center;
+}
+
+.works {
+  padding: 40px 20px;
+}
+
+.work {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.thumb {
+  width: 800px;
+  height: 400px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: #57564F;
+  color: #F8F3CE;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.sns {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.sns-links a {
+  margin: 0 10px;
+  display: inline-block;
+  padding: 10px 25px;
+  background: #57564F;
+  color: #F8F3CE;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+
+
+/* ===== スライダー全体 ===== */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #DDDAD0;
+}
+
+/* 横並びにする */
+.slides {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== 矢印 ===== */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #57564f71;
+  color: #F8F3CE;
+  border: none;
+  font-size: 28px;
+  padding: 10px 15px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* ホバーした時だけ表示 */
+.slider:hover .arrow {
+  opacity: 1;
+}
+
+/* ===== ドット ===== */
+.dots {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #fff;
+}
+
+/* 創作 */
+.character-title {
+  margin: 0 0 1px;  /* H1でも余白を殺す */
+  text-align: center;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* 1キャラ */
+.character-item {
+  text-align: center;
+  text-decoration: none;
+  color: #57564F;
+}
+
+/* 正方形サムネ */
+.character-thumb {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #DDDAD0;
+  overflow: hidden;
+}
+
+/* 画像 */
+.character-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ← キャラ絵ならこれが最適 */
+  display: block;
+}
+
+/* 名前 */
+.character-name {
+  margin-top: 14px;
+  font-size: 16px;
+}
+
+
+.character-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+a:hover {
+    color: #aba696;
+}
+
+/* ===== スマホ・タブレットのみ ===== */
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  .thumb {
+  width: 500px;
+  height: 250px;
+  }
+  .thumb img {
+    object-fit: contain;
+  }
+  .slide-menu a {
+    color: #57564F;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent; /* iOSの青ハイライト消す */
+  }
+
+  a:hover {
+    color: #aba696;
+  }
+  .slide-menu a:hover {
+    color: #aba696;
+  }
+
+   .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    background: #fff;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;       /* ← 縦中央 */
+    justify-content: left;   /* ← ロゴ中央 */
+  }
+   .logo {
+    text-align:left;
+    font-size: 22px;     /* ロゴが文字の場合 */
+  }
+
+
+  .slider {
+    height: 56.25vw; /* 16:9 */
+  }
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+
+   .menu-btn {
+    display: block;
+    position: fixed !important;
+    top: 18px;
+    right: 20px;
+    transform: none !important;
+    display: block !important;
+    opacity: 1 !important;
+    z-index: 9999;
+  }
+  body {
+    padding-top: 87px; /* ← headerの実高さより少し大きめ */
+  }
+
+  .character-grid-2 {
+  grid-template-columns: repeat(3, 1fr);
+  }
+
+}
