@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>MINDCORE page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <br>　
+  <h1 class="logo">MINDCORE</h1>
+  <br>　
+
+  <!-- PC用ナビ -->
+  <nav class="nav">
+    <a href="index.html">TOP</a>
+    <a href="index.html#creation">CREATION</a>
+    <a href="Game.html" class="nav-game">GAME</a>
+    <a href="shop.html">SHOP</a>
+    <a href="Others.html">OTHERS</a>
+  </nav>
+
+  <!-- ハンバーガー（スマホ用） -->
+  <button class="menu-btn" id="menuBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+
+<!-- スライドメニュー -->
+<nav class="slide-menu" id="slideMenu">
+
+  <button class="menu-close" id="menuClose">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+    <a href="index.html">TOP</a>
+    <a href="index.html#creation">CREATION</a>
+      <a href="wonderland.html">　- fuck you ワンダーランド</a>
+      <a href="Konketusfd.html">　- 混血SFD</a>
+      <a href="Soredemo.html">　- それでも酸素は薄かった</a>
+      <a href="MINDCORE.html">　- MINDCORE</a>
+      <a href="ANGEL.html">　- ANGEL</a>
+    <a href="Game.html">GAME</a>
+    <a href="shop.html">SHOP</a>
+    <a href="Others.html">OTHERS</a>
+</nav>
+
+
+<section class="about">
+  <h1>Introduction</h1>
+  <p>社会では精神医学や神経科学が飛躍的に発展し、脳の機能や記憶のメカニズムがかつてないほど解明された。
+    <br>そして新たな精神的病理「心的忘却症候群」が発見される。
+    <br>心的忘却症候群を患った患者の凍結された記憶を復元する、一人の記憶復元士の物語。</p>
+</section>
+
+<section class="works">
+  <div class="work">
+    <h3>タイトル</h3>
+    <div class="thumb">
+    <img src="　" alt="MINDCORE" loading="lazy"></div>
+    <a class="btn" href="　">　　MORE ▶︎　　</a>
+  </div>
+
+</section>
+
+
+  <!-- 矢印 -->
+  <button class="arrow prev" id="prev">←</button>
+  <button class="arrow next" id="next">→</button>
+
+  <!-- ドット -->
+  <div class="dots" id="dots"></div>
+</div>
+
+
+<!-- sns -->
+<section class="sns">
+  <h2>SNS</h2>
+  <div class="sns-links">
+    <a href="https://x.com/plq2lmq5rbkb5eq?s=21">X</a>
+    <a href="https://www.instagram.com/96tanuki3?igsh=MXV2azQwaHA2azJ4cg%3D%3D&utm_source=qr">Instagram</a>
+    <a href="https://www.pixiv.net/users/100416662">pixiv</a>
+  </div>
+</section>
+
+<script>
+  const slides = document.querySelector(".slides");
+  const slideCount = document.querySelectorAll(".slide").length;
+  const prev = document.getElementById("prev");
+  const next = document.getElementById("next");
+  const dotsContainer = document.getElementById("dots");
+
+  let index = 0;
+  let interval;
+
+  /* ===== ドット生成 ===== */
+  for (let i = 0; i < slideCount; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => {
+      index = i;
+      updateSlide();
+      resetAutoSlide();
+    });
+    dotsContainer.appendChild(dot);
+  }
+
+  const dots = document.querySelectorAll(".dot");
+
+  function updateSlide() {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+  }
+
+  /* ===== 次へ ===== */
+  next.addEventListener("click", () => {
+    index = (index + 1) % slideCount;
+    updateSlide();
+    resetAutoSlide();
+  });
+
+  /* ===== 前へ ===== */
+  prev.addEventListener("click", () => {
+    index = (index - 1 + slideCount) % slideCount;
+    updateSlide();
+    resetAutoSlide();
+  });
+
+  /* ===== 自動スライド ===== */
+  function startAutoSlide() {
+    interval = setInterval(() => {
+      index = (index + 1) % slideCount;
+      updateSlide();
+    }, 4000);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(interval);
+    startAutoSlide();
+  }
+
+  startAutoSlide();
+</script>
+
+<script>
+  
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("slideMenu");
+
+  const closeBtn = document.getElementById("menuClose");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
+</script>
+
+
+<!-- <script src="script.js"></script> -->
+</body>
+</html>
+
+
