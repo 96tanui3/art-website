@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Game page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <br>　
+  <h1 class="logo">ゲーム一覧</h1>
+  <br>　
+
+  <!-- PC用ナビ -->
+  <nav class="nav">
+    <a href="index.html">TOP</a>
+    <a href="index.html#creation">CREATION</a>
+    <a href="Game.html">GAME</a>
+    <a href="shop.html">SHOP</a>
+    <a href="Others.html">OTHERS</a>
+  </nav>
+
+
+  <!-- ハンバーガー（スマホ用） -->
+  <button class="menu-btn" id="menuBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+
+<!-- スライドメニュー -->
+<nav class="slide-menu" id="slideMenu">
+
+  <button class="menu-close" id="menuClose">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+    <a href="index.html">TOP</a>
+    <a href="index.html#creation">CREATION</a>
+      <a href="wonderland.html">　- fuck you ワンダーランド</a>
+      <a href="Konketusfd.html">　- 混血SFD</a>
+      <a href="Soredemo.html">　- それでも酸素は薄かった</a>
+      <a href="MINDCORE.html">　- MINDCORE</a>
+      <a href="ANGEL.html">　- ANGEL</a>
+    <a href="Game.html">GAME</a>
+    <a href="shop.html">SHOP</a>
+    <a href="Others.html">OTHERS</a>
+</nav>
+
+
+<section class="about">
+  <h1>GAME</h1>
+  <p>暇な時間にゆるっと遊べる無料のノベルゲームです。
+    <br>すべての端末に対応しております。
+  <p>⚠︎ 一部ゲーム実況不可の物があります。</p>
+</section>
+
+<section class="works">
+  <div class="work">
+    <h3>マグカップは割れない</h3>
+    <div class="thumb">
+    <img src="image/_Gm.jpg" alt="マグカップは割れない" loading="lazy"></div>
+    <p>プレイ時間5分　ゲーム実況不可</p>
+    <p>大きな隕石が地球に向かって落ちてくる。今夜で世界は終わってしまう。<br>地球最後の日、さぁ何をして過ごそうか。</p>
+    <a class="btn" href="https://novelgame.jp/games/show/11245">　　PLAY ▶︎　　</a>
+  </div>
+
+  <div class="work">
+    <h3>フラワージェリーケーキ</h3>
+    <div class="thumb">
+    <img src="image/_Gf.jpg" alt="フラワージェリーケーキ" loading="lazy"></div>
+    <p>プレイ時間5分　ゲーム実況不可</p>
+    <p>日曜の午後３時に公園に会いに行こう。<br>背中に花を抱えたお花屋さんがそこにいるはず。</p>
+    <a class="btn" href="https://novelgame.jp/games/show/11292">　　PLAY ▶︎　　</a>
+  </div>
+
+  <div class="work">
+    <h3>最後は浜辺で会いましょ</h3>
+    <div class="thumb">
+    <img src="image/_Gs.jpg" alt="最後は浜辺で会いましょ" loading="lazy"></div>
+    <p>プレイ時間15分　ゲーム実況可能</p>
+    <p>目が覚めた場所は静かな夜の海。<br>同じく浜辺にいた不思議な女の子とお話しするゲーム。</p>
+    <a class="btn" href="https://novelgame.jp/games/show/11368">　　PLAY ▶︎　　</a>
+  </div>
+
+  <div class="work">
+    <h3>最後の晩餐</h3>
+    <div class="thumb">
+    <img src="image/_Gb.jpg" alt="最後の晩餐" loading="lazy"></div>
+    <p>プレイ時間15分　ゲーム実況可能</p>
+    <p>死ぬまでの時間、親友とゆっくり対話をしながらクリームソーダを胃に流していく。<br>私が最後に飲むもの、それは毒入りクリームソーダだ。</p>
+    <a class="btn" href="https://novelgame.jp/games/show/11708">　　PLAY ▶︎　　</a>
+  </div>
+</section>
+
+
+  <!-- 矢印 -->
+  <button class="arrow prev" id="prev">←</button>
+  <button class="arrow next" id="next">→</button>
+
+  <!-- ドット -->
+  <div class="dots" id="dots"></div>
+</div>
+
+
+<!-- sns -->
+<section class="sns">
+  <h2>SNS</h2>
+  <div class="sns-links">
+    <a href="https://x.com/plq2lmq5rbkb5eq?s=21">X</a>
+    <a href="https://www.instagram.com/96tanuki3?igsh=MXV2azQwaHA2azJ4cg%3D%3D&utm_source=qr">Instagram</a>
+    <a href="https://www.pixiv.net/users/100416662">pixiv</a>
+  </div>
+</section>
+
+<script>
+  const slides = document.querySelector(".slides");
+  const slideCount = document.querySelectorAll(".slide").length;
+  const prev = document.getElementById("prev");
+  const next = document.getElementById("next");
+  const dotsContainer = document.getElementById("dots");
+
+  let index = 0;
+  let interval;
+
+  /* ===== ドット生成 ===== */
+  for (let i = 0; i < slideCount; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => {
+      index = i;
+      updateSlide();
+      resetAutoSlide();
+    });
+    dotsContainer.appendChild(dot);
+  }
+
+  const dots = document.querySelectorAll(".dot");
+
+  function updateSlide() {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+  }
+
+  /* ===== 次へ ===== */
+  next.addEventListener("click", () => {
+    index = (index + 1) % slideCount;
+    updateSlide();
+    resetAutoSlide();
+  });
+
+  /* ===== 前へ ===== */
+  prev.addEventListener("click", () => {
+    index = (index - 1 + slideCount) % slideCount;
+    updateSlide();
+    resetAutoSlide();
+  });
+
+  /* ===== 自動スライド ===== */
+  function startAutoSlide() {
+    interval = setInterval(() => {
+      index = (index + 1) % slideCount;
+      updateSlide();
+    }, 4000);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(interval);
+    startAutoSlide();
+  }
+
+  startAutoSlide();
+</script>
+
+<script>
+  
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("slideMenu");
+
+  const closeBtn = document.getElementById("menuClose");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
+</script>
+
+
+<!-- <script src="script.js"></script> -->
+</body>
+</html>
+
+
