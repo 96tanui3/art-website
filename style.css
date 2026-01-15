@@ -369,5 +369,9 @@ a:hover {
   .character-grid-2 {
   grid-template-columns: repeat(3, 1fr);
   }
+  .character-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
 
 }
