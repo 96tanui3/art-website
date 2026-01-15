@@ -377,4 +377,9 @@ a:hover {
     gap: 30px;
   }
 
+  .sns-links a {
+  margin: 0 20px;
+  padding: 10px 20px;
+  }
+
 }
