@@ -390,4 +390,7 @@ a:hover {
     margin: 0;              /* 横並び用の margin をリセット */
     text-align: center;
   }
+  .sns-links a:active {
+    transform: scale(0.97);
+  }
 }
