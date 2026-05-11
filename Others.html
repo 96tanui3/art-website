@@ -65,6 +65,38 @@
   </div>
 </section>
 
+  
+<!-- ブレンダー -->
+<section class="character-section">
+  <h2 class="character-title">Blender</h2>
+  <div class="setumei"><br>◆は版権キャラクターです。</div>
+
+ <section class="character-grid-2">
+  <a href="#" class="character-item" data-img="　">
+    <div class="character-thumb">
+      <img src="　" alt="ピニャコ" loading="lazy">
+    </div>
+    <p class="character-name"><b>ピニャコ</b></p>
+  </a>
+
+  <a href="#" class="character-item" data-img="image/blender_Teto.jpeg">
+    <div class="character-thumb">
+      <img src="image/B_2.jpg" alt="重音テト" loading="lazy">
+    </div>
+    <p class="character-name"><b>◆重音テト</b></p>
+  </a>
+
+  <a href="#" class="character-item" data-img="image/blender_Miku.jpeg">
+    <div class="character-thumb">
+      <img src="image/B_1.jpg" alt="初音ミク" loading="lazy">
+    </div>
+    <p class="character-name"><b>◆初音ミク</b></p>
+  </a>
+
+ </section>
+ <div class="modal" id="modal">
+  <img id="modalImg" src="">
+</div>
 
 
   <!-- 矢印 -->
@@ -145,6 +177,26 @@
   }
 
   startAutoSlide();
+
+
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modalImg");
+// 全キャラに対応
+document.querySelectorAll(".character-item").forEach(item => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault(); // aタグの遷移止める
+
+    const imgSrc = item.getAttribute("data-img");
+    modalImg.src = imgSrc;
+
+    modal.classList.add("show"); // ← displayじゃなくてこれ
+  });
+});
+// どこクリックでも閉じる
+modal.addEventListener("click", () => {
+  modal.classList.remove("show"); // ← こっちも統一
+});
+
 </script>
 
 <script>
@@ -167,5 +219,3 @@
 <!-- <script src="script.js"></script> -->
 </body>
 </html>
-
-
