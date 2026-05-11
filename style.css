@@ -129,7 +129,7 @@ body {
   text-align: center;
 }
 
-.thumb {
+ .thumb {
   width: 100%;
   max-width: 800px;
   height: auto;
@@ -137,13 +137,30 @@ body {
   margin: 20px auto;
   overflow: hidden;
 }
-
 .thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
+
+.thumb_2 {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  aspect-ratio: 3 / 1; /* Xヘッダーっぽい比率 */
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.thumb_2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 
 .btn {
   display: inline-block;
@@ -288,7 +305,6 @@ body {
   font-size: 16px;
 }
 
-
 .character-grid-2 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -298,8 +314,85 @@ body {
   padding: 80px 20px;
 }
 
+.modal img {
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+.modal.show {
+  display: flex;
+}
+
+
+/* キャラ一覧 */
+.resident-list {
+  margin: 0 auto;
+  max-width: 900px;
+}
+.resident-list h2 {
+  text-align: center;
+}
+.resident {
+  display: flex;
+  gap: 30px;
+  margin: 60px 0;
+  align-items: center;
+}
+.キャラ {
+  width: 200px;
+  height: 200px; /* ←aspect-ratioの代わりに固定 */
+  min-width: 200px;
+}
+.キャラ img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像を正方形にフィット */
+}
+.info {
+  /* max-width: 900px; */
+  line-height: 1.5;
+}
+.info rt {
+  font-weight: normal;
+  font-size: 0.7em;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.news {
+  background-color: #fff;
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+.news hr {
+  margin-left: 30px;
+  margin-right: 30px;
+  color: #aba696;
+}
+
 a:hover {
     color: #aba696;
+}
+
+.setumei {
+  text-align: center;
 }
 
 /* ===== スマホ・タブレットのみ ===== */
@@ -374,8 +467,17 @@ a:hover {
   }
   .character-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 40px;
   }
+
+  .resident-list{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .grid {
+  grid-template-columns: repeat(1, 1fr);
+  gap: 5px;
+}
 
   .sns-links {
     display: flex;
