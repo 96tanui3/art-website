@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+/* ==========================================================================
+   Base Styles（全体共通設定）
+   ========================================================================== */
 body {
     margin: 0;
     padding: 0;
@@ -20,6 +23,9 @@ a {
     padding: 40px 20px;
 }
 
+/* ==========================================================================
+   Buttons（パキッとした黒ボタン）
+   ========================================================================== */
 .btn-black {
     display: inline-block;
     background-color: #000000;
@@ -42,7 +48,7 @@ a {
 }
 
 /* ==========================================================================
-   画像枠（フレーム）の共通設定
+   Image Frames（画像枠の共通設定）
    ========================================================================== */
 .img-frame {
     background-color: #ffffff; 
@@ -74,7 +80,7 @@ a {
 }
 
 /* ==========================================================================
-   ヘッダー（共通・PC表示ベース）
+   Header（ヘッダー・PCベース）
    ========================================================================== */
 .main-header {
     background-color: #000000;
@@ -84,10 +90,6 @@ a {
     width: 100%;
     box-sizing: border-box;
     z-index: 1000;
-}
-
-body {
-    padding-top: 0;
 }
 
 .header-inner {
@@ -134,13 +136,13 @@ body {
     color: #000000;             
 }
 
+/* PCではスマホ用パーツを隠す */
 .menu-checkbox, .menu-btn, .sp-menu-title, .sp-menu-sns, .arrow-btn {
     display: none;
 }
 
-
 /* ==========================================================================
-   各セクション共通
+   Common Sections（各セクション共通タイトルなど）
    ========================================================================== */
 .section-block {
     margin-bottom: 70px;
@@ -163,8 +165,16 @@ body {
     margin-top: 2px;
 }
 
+.price-tag {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+}
+
 /* ==========================================================================
-   プロフィール
+   Profile（プロフィール）
    ========================================================================== */
 .profile-card {
     display: flex;
@@ -240,7 +250,7 @@ body {
 }
 
 /* ==========================================================================
-   このサイトについて
+   About（このサイトについて）
    ========================================================================== */
 .about-box {
     border: 2px solid #000000;
@@ -259,9 +269,8 @@ body {
     margin-bottom: 0;
 }
 
-
 /* ==========================================================================
-   一次創作（5カラムグリッド）
+   Illust / Grid 5cols（一次創作・イラストグリッド）
    ========================================================================== */
 .grid-5cols {
     display: grid;
@@ -272,6 +281,8 @@ body {
 
 .grid-5cols .img-frame {
     aspect-ratio: 3 / 4;
+    outline: 0px solid #000000;
+    transition: outline 0.1s ease;
 }
 
 .work-item {
@@ -285,17 +296,12 @@ body {
     line-height: 1.3;
 }
 
-.grid-5cols .img-frame {
-    outline: 0px solid #000000;
-    transition: outline 0.1s ease;
-}
-
-.grid-5cols .work-item:hover .img-frame {
+.work-item:hover .img-frame {
     outline: 3px solid #000000;
 }
 
 /* ==========================================================================
-   ゲーム / ショップ / その他（レイアウト共通パターン）
+   Index Sections（PC：ゲーム / ショップ / その他 共通パターン）
    ========================================================================== */
 .flex-container, .flex-reverse, .shop-item {
     display: flex;
@@ -320,14 +326,6 @@ body {
     flex: 1;
 }
 
-.price-tag {
-    font-size: 16px;
-    font-weight: bold;
-    border-bottom: 1px solid #000000;
-    padding-bottom: 2px;
-    margin-bottom: 10px;
-}
-
 .game-detail p, .shop-detail p, .others-detail p {
     font-size: 15px;
     font-weight: bold;
@@ -339,7 +337,338 @@ body {
 }
 
 /* ==========================================================================
-   SNS（丸型画像対応版）
+   Comic Section（漫画・Creation内）
+   ========================================================================== */
+.main-work-title {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.world-intro-box {
+    border: 2px solid #0b5e28; 
+    padding: 25px;
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+}
+
+.world-intro-box p {
+    margin: 0 0 8px 0;
+}
+.world-intro-box p:last-of-type {
+    margin-bottom: 0;
+}
+
+.creation-flex-item {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    align-items: flex-start;
+}
+
+.creation-thumb {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.manga-aspect .img-frame {
+    aspect-ratio: 3 / 4; 
+}
+
+.creation-detail {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.creation-detail .price-tag {
+    text-align: right;
+    width: 100%;
+}
+
+.work-sub-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.work-desc {
+    font-size: 14px;
+    margin: 0 0 20px 0;
+    line-height: 1.5;
+}
+
+.Creation_A {
+    color: #d5045c;
+}
+.Creation_A:hover {
+    color: #870834;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Movie Section（動画横スクロール）
+   ========================================================================== */
+.movie-year-section {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.year-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0 0 12px 20px; 
+    text-align: left;
+}
+
+.movie-scroll-container {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 0 20px 15px 20px; 
+    box-sizing: border-box; 
+    -webkit-overflow-scrolling: touch;
+}
+
+.movie-scroll-container::-webkit-scrollbar {
+    height: 4px; 
+}
+.movie-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+.movie-scroll-container::-webkit-scrollbar-thumb {
+    background: #474747; 
+}
+
+.movie-scroll-container .movie-item {
+    flex: 0 0 180px; 
+    text-align: center;
+}
+
+.movie-scroll-container .img-frame.square {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.movie-scroll-container .img-frame.square img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; 
+}
+
+.movie-scroll-container .movie-item:hover .img-frame.square img {
+    transform: scale(1.1); 
+}
+
+.movie-scroll-container .movie-item p {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.3;
+    white-space: normal;
+    margin: 0;
+}
+
+/* 🎬 動画アイテム（通常のグリッド用ホバー） */
+.movie-grid .movie-item .img-frame {
+    overflow: hidden; 
+    cursor: pointer;
+}
+.movie-grid .movie-item .img-frame img {
+    transition: transform 0.3s ease; 
+}
+.movie-grid .movie-item:hover .img-frame img {
+    transform: scale(1.1);
+}
+
+/* ==========================================================================
+   Main character（キャラクターリスト）
+   ========================================================================== */
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    gap: 50px 30px; /* 縦の余白を少し広げるとさらに見やすくなります */
+    max-width: 750px; /* 画像を大きくする分、全体の最大幅を少し広げるのがおすすめ */
+    margin: 0 auto;
+}
+
+.character-card {
+    display: flex;
+    gap: 30px;       
+    text-align: left;
+    align-items: flex-start;
+}
+
+.character-thumb-wrap {
+    width: 190px;      
+    flex-shrink: 0;
+}
+
+.character-thumb-wrap .img-frame.square.shadow {
+    aspect-ratio: 1 / 1;
+    box-shadow: 6px 6px 0px #000000;
+}
+
+.character-status {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+}
+
+.char-price-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 8px; 
+    width: 100%;
+}
+
+.char-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #000000; 
+    height: auto;
+}
+
+.char-table th, .char-table td {
+    border: 1px solid #000000;
+    padding: 6px 10px; 
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.char-table th {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    width: 25%; 
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.char-table td {
+    background-color: #ffffff;
+}
+
+/* ==========================================================================
+   Game Playlist（作品内オーディオ風ゲームUI）
+   ========================================================================== */
+.game-playlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+    max-width: 680px; 
+    margin: 0 auto 40px auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.game-track-item {
+    width: 100%;
+    text-align: center;
+}
+
+.game-track-thumb {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.game-track-thumb .img-frame {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    background-color: #cccccc;
+}
+
+.game-track-title {
+    font-size: 19px;
+    font-weight: bold;
+    margin: 0 0 12px 0;
+    color: #000000;
+}
+
+.audio-player-ui {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.player-seekbar {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.seekbar-line {
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+}
+.seekbar-pointer {
+    position: absolute;
+    left: 35%;
+    width: 8px;
+    height: 8px;
+    background-color: #000000;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+.player-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.player-btn svg {
+    width: 100%;
+    height: 100%;
+    fill: #000000;
+}
+
+.game-track-footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.game-track-meta {
+    flex: 1;
+    padding-right: 15px;
+}
+.game-track-meta p {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.6;
+    margin: 0 0 4px 0;
+}
+
+/* ==========================================================================
+   SNS & Footer（共通）
    ========================================================================== */
 .sns-links {
     display: flex;
@@ -368,9 +697,6 @@ body {
     transform: scale(1.08); 
 }
 
-/* ==========================================================================
-   フッター（レシート風）
-   ========================================================================== */
 .main-footer {
     background-color: #000000;
     color: #ffffff;
@@ -426,449 +752,16 @@ body {
 }
 
 /* ==========================================================================
-   Creation ページ専用レイアウト設定
+   📱 Responsive Styles（スマホ専用設定：画面幅 768px 以下）
    ========================================================================== */
-.main-work-title {
-    font-size: 28px;
-    letter-spacing: 1px;
-}
-.world-intro-box {
-    border: 2px solid #0b5e28; 
-    padding: 25px;
-    max-width: 650px;
-    margin: 0 auto;
-    text-align: left;
-    font-size: 15px;
-    font-weight: bold;
-    position: relative;
-}
-.world-intro-box p {
-    margin: 0 0 8px 0;
-}
-.world-intro-box p:last-of-type {
-    margin-bottom: 0;
-}
-
-.creation-flex-item {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-    align-items: flex-start;
-}
-.creation-thumb {
-    width: 200px;
-    flex-shrink: 0;
-}
-.manga-aspect .img-frame {
-    aspect-ratio: 3 / 4; 
-}
-.creation-detail {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.creation-detail .price-tag {
-    text-align: right;
-    width: 100%;
-}
-
-.work-sub-title {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0 0 10px 0;
-}
-.work-desc {
-    font-size: 14px;
-    margin: 0 0 20px 0;
-    line-height: 1.5;
-}
-
-.Creation_A {
-    color: #d5045c;
-}
-.Creation_A:hover {
-    color: #870834;
-    text-decoration: underline;
-}
-
-/* ==========================================================================
-   Movie（動画グリッド ＆ 折りたたみアコーディオン）
-   ========================================================================== */
-/* 年ごとのセクションの隙間 */
-.movie-year-section {
-    margin-bottom: 40px;
-    width: 100%;
-}
-
-/* 「2026」などの年号タイトル（サイト全体のフォントに合わせて太字・左寄せ） */
-.year-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #000000;
-    margin: 0 0 12px 20px; /* 左側に少し余白を入れて内側に寄せます */
-    text-align: left;
-}
-
-.movie-scroll-container {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    padding: 0 20px 15px 20px; /* 左右に余白を作り、下にスクロールバー用の隙間を空ける */
-    box-sizing: border-box; 
-    /* スマホで指を離した後も滑らかにスクロールさせる設定 */
-    -webkit-overflow-scrolling: touch;
-}
-
-.movie-scroll-container::-webkit-scrollbar {
-    height: 4px; /* バーの太さ */
-}
-.movie-scroll-container::-webkit-scrollbar-track {
-    background: #f1f1f1; /* バーの背景（薄いグレー） */
-}
-.movie-scroll-container::-webkit-scrollbar-thumb {
-    background: #474747; /* バー本体（黒猫さんのサイトに合わせたパキッとした黒） */
-}
-
-.movie-scroll-container .movie-item {
-    flex: 0 0 180px; /* パソコンでもスマホでも、1個あたり「幅130px」でガチッと固定します */
-    text-align: center;
-}
-
-.movie-scroll-container .img-frame.square {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    margin-bottom: 8px;
-}
-
-.movie-scroll-container .movie-item p {
-    font-size: 13px;
-    font-weight: bold;
-    line-height: 1.3;
-    white-space: normal;
-    margin: 0;
-}
-
-
-.movie-scroll-container .img-frame.square {
-    overflow: hidden;
-}
-.movie-scroll-container .img-frame.square img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease; 
-}
-.movie-scroll-container .movie-item:hover .img-frame.square img {
-    transform: scale(1.1); 
-}
-
-/* ==========================================================================
-   Main character（キャラクターリスト：2カラム）
-   ========================================================================== */
-.character-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 40px 30px;
-    max-width: 850px; 
-    margin: 0 auto;
-}
-
-.character-card {
-    display: flex;
-    gap: 20px;       
-    text-align: left;
-    align-items: flex-end;
-}
-
-.character-thumb-wrap {
-    width: 140px;      
-    flex-shrink: 0;
-}
-
-.character-thumb-wrap .img-frame.square.shadow {
-    aspect-ratio: 1 / 1;
-    box-shadow: 6px 6px 0px #000000;
-}
-
-.character-status {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; 
-}
-
-.char-price-row {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    margin-bottom: 8px; 
-    width: 100%;
-}
-
-.char-table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 2px solid #000000; 
-    height: auto;
-}
-
-.char-table th, .char-table td {
-    border: 1px solid #000000;
-    padding: 6px 10px; 
-    font-size: 13px;
-    font-weight: bold;
-    line-height: 1.4;
-}
-
-.char-table th {
-    background-color: #000000;
-    color: #ffffff;
-    text-align: center;
-    width: 25%; 
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-.char-table td {
-    background-color: #ffffff;
-}
-
-/* 🎬 動画アイテムのホバーアニメーション（画像ズーム） */
-.movie-grid .movie-item .img-frame {
-    overflow: hidden; /* 枠からはみ出た画像を隠す */
-    cursor: pointer;
-}
-
-.movie-grid .movie-item .img-frame img {
-    transition: transform 0.3s ease; /* ズームの速度（0.3秒） */
-}
-
-/* マウスが乗ったとき（:hover）に画像を1.1倍に大きくする */
-.movie-grid .movie-item:hover .img-frame img {
-    transform: scale(1.1);
-}
-
-
-
-
-/* ==========================================================================
-   Gameセクション（新デザイン：プレイボタン付き）
-   ========================================================================== */
-.game-playlist {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 60px;
-    width: 100%;
-    max-width: 680px; /* スマホ・PCどちらでも綺麗に収まるサイズ */
-    margin: 0 auto 40px auto;
-    padding: 0 15px;
-    box-sizing: border-box;
-}
-
-.game-track-item {
-    width: 100%;
-    text-align: center;
-}
-
-/* ゲーム画像（16:9） */
-.game-track-thumb {
-    width: 100%;
-    margin-bottom: 15px;
-}
-.game-track-thumb .img-frame {
-    aspect-ratio: 16 / 9;
-    width: 100%;
-    background-color: #cccccc;
-}
-
-/* ゲームタイトル */
-.game-track-title {
-    font-size: 19px;
-    font-weight: bold;
-    margin: 0 0 12px 0;
-    color: #000000;
-}
-
-/* 🎵 プレーヤーUI */
-.audio-player-ui {
-    width: 100%;
-    margin-bottom: 20px;
-}
-.player-seekbar {
-    position: relative;
-    width: 100%;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-}
-.seekbar-line {
-    width: 100%;
-    height: 1px;
-    background-color: #000000;
-}
-.seekbar-pointer {
-    position: absolute;
-    left: 35%;
-    width: 8px;
-    height: 8px;
-    background-color: #000000;
-    border-radius: 50%;
-    transform: translateX(-50%);
-}
-.player-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-}
-.player-btn {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    width: 22px;
-    height: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.player-btn svg {
-    width: 100%;
-    height: 100%;
-    fill: #000000;
-}
-
-/* 🧾 詳細テキストとボタンを左右に分ける設定 */
-.game-track-footer {
-    display: flex;
-    justify-content: space-between; /* 左に説明、右にボタン */
-    align-items: flex-start;
-    text-align: left;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.game-track-meta {
-    flex: 1;
-    padding-right: 15px;
-}
-.game-track-meta p {
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 1.6;
-    margin: 0 0 4px 0;
-}
-
-
 @media screen and (max-width: 768px) {
-.creation-flex-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .creation-thumb {
-        width: 180px;
-    }
-    .creation-price-row {
-        justify-content: center;
-    }
-    .price-line {
-        display: none;
-    }
-
- .movie-grid {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important; 
-        gap: 15px 10px !important;
-        padding: 0 10px !important;
-    }
-    .movie-grid .movie-item {
-        display: block !important; /* 基本はスマホでも全部表示する */
-    }
-    main:not(.movie-page-container) .section-block > .movie-grid .movie-item:nth-child(n+7) {
-        display: none !important;
-    }
     
-    .character-grid {
-        grid-template-columns: 1fr; 
-        gap: 35px;
-        padding: 0 15px;
-    }
-    .character-card {
-        align-items: center; 
-        flex-direction: row; 
-    }
-    .character-thumb-wrap {
-        width: 160px;
-    }
-
-    .creation-flex-item {
-        display: flex !important;
-        flex-direction: row !important;   
-        align-items: flex-end !important; 
-        text-align: left !important;
-        gap: 20px !important;             
-        justify-content: space-between !important;
-        width: 100% !important;
-        padding: 0 10px !important;       
-        box-sizing: border-box !important;
-    }
-    .creation-thumb {
-        width: 160px !important;         
-        flex-shrink: 0 !important;
-    }
-    .creation-info-block {
-        flex: 1 !important;                
-        min-width: 0 !important;          
-    }
-    .creation-price-row {
-        justify-content: flex-end !important; 
-    }
-    .price-line {
-        display: block !important;            
-    }
-
-    .grid-5cols {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;                             
-        padding: 0 10px;                      
-    }
-
-    .work-title {
-        font-size: 17px;
-    }
-
-    .section-title {
-        font-size: 28px;
-    }
-    .section-title .en-sub {
-        font-size: 13px;
-    }
-
-    .status-table th, .status-table td,
-    .about-box,
-    .game-detail p, .shop-detail p, .others-detail p {
-        font-size: 15px; 
-    }
-    
-    .status-rating {
-        font-size: 16px;
-    }
-    .status-price {
-        font-size: 22px;
-    }
-
     body {
         padding-top: 100px; 
         font-size: 18px;
     }
 
+    /* ─── ヘッダー固定 & スマホメニュー ─── */
     .main-header {
         position: fixed;
         top: 0;
@@ -987,27 +880,22 @@ body {
         align-items: center;
         padding: 10px 0;
         width: 100%;
+        transition: padding-left 0.2s ease;
     }
 
-.global-nav ul li a {
-    transition: padding-left 0.2s ease;
-}
-.global-nav ul li a .arrow-btn {
-    transition: transform 0.2s ease, background-color 0.2s, color 0.2s;
-}
-
-.global-nav ul li a:hover {
-    padding-left: 8px; 
-}
-
-.global-nav ul li a:hover .arrow-btn {
-    transform: scale(1.05) translateX(-5px); 
-}
-
-.global-nav ul li a:hover .arrow-btn:not(.active) {
-    background-color: #000000;
-    color: #ffffff;
-}
+    .global-nav ul li a:hover {
+        padding-left: 8px; 
+    }
+    .global-nav ul li a .arrow-btn {
+        transition: transform 0.2s ease, background-color 0.2s, color 0.2s;
+    }
+    .global-nav ul li a:hover .arrow-btn {
+        transform: scale(1.05) translateX(-5px); 
+    }
+    .global-nav ul li a:hover .arrow-btn:not(.active) {
+        background-color: #000000;
+        color: #ffffff;
+    }
 
     .arrow-btn {
         display: flex;
@@ -1031,48 +919,203 @@ body {
         gap: 15px;
         margin-top: 5px;
     }
-     .global-nav .sp-sns-links a {
-    width: 65px;
-    height: 45px;
-    aspect-ratio: 1 / 1;      
-    background-color: #000000; 
-    border-radius: 0;          
-    overflow: hidden;
-    display: block;
-    transform: none;       
-    transition: opacity 0.2s ease;
-}
+    .global-nav .sp-sns-links a {
+        width: 65px;
+        height: 45px;
+        aspect-ratio: 1 / 1;      
+        background-color: #000000; 
+        border-radius: 0;          
+        overflow: hidden;
+        display: block;
+        transition: opacity 0.2s ease;
+    }
+    .global-nav .sp-sns-links a img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;      
+        background-color: #000000;
+        display: block;
+    }
+    .global-nav .sp-sns-links a:hover {
+        opacity: 0.7;            
+    }
 
-/* 中に入っているロゴ画像の設定 */
-.global-nav .sp-sns-links a img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;      
-    background-color: #000000;
-    display: block;
-}
-
-
-.global-nav .sp-sns-links a:hover {
-    transform: none;          
-    opacity: 0.7;            
-}
-
-.game-thumb, .shop-thumb, .others-thumb {
-    width: 180px;
-}
-
-.game-playlist {
-    max-width: 500px; /* スマホ・PCどちらでも綺麗に収まるサイズ */
-}
-
-.movie-scroll-container .movie-item {
-    flex: 0 0 150px;
-}
-    .work-title { font-size: 14px; margin-top: 10px; }
+    /* ─── 共通フォントサイズ・タイトル調整 ─── */
     .section-title { font-size: 28px; }
     .section-title .en-sub { font-size: 13px; }
     .status-table th, .status-table td, .about-box, .game-detail p, .shop-detail p, .others-detail p { font-size: 15px; }
     .status-rating { font-size: 16px; }
     .status-price { font-size: 22px; }
+
+    /* ─── プロフィール ─── */
+    .profile-card {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 24px; 
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    .profile-thumb {
+        width: 160px;
+        flex-shrink: 0;
+    }
+    .profile-thumb .img-frame {
+        width: 100%;
+        aspect-ratio: 1 / 1; 
+    }
+    .profile-status {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .status-meta-row {
+        width: 100%;
+    }
+
+    /* ─── 一次創作イラスト（3列グリッド） ─── */
+    .grid-5cols {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;                             
+        padding: 0 10px;                      
+    }
+    .work-title {
+        font-size: 17px;
+    }
+
+    /* ─── 漫画（Comic / Creation）上揃え・横並び ─── */
+    .creation-flex-item {
+        display: flex !important;
+        flex-direction: row !important;   
+        align-items: flex-start !important; /* 上揃えキープ */
+        text-align: left !important;
+        gap: 20px !important;             
+        justify-content: space-between !important;
+        width: 100% !important;
+        padding: 0 10px !important;       
+        box-sizing: border-box !important;
+    }
+    .creation-thumb {
+        width: 160px !important;         
+        flex-shrink: 0 !important;
+    }
+    .creation-info-block {
+        flex: 1 !important;                
+        min-width: 0 !important;          
+    }
+    .creation-price-row {
+        justify-content: flex-end !important; 
+    }
+    .price-line {
+        display: block !important;            
+    }
+
+    /* ─── ゲーム / ショップ / その他共通（画像上・文字下・一列に縦並び） ─── */
+    .flex-container, 
+    .flex-reverse, 
+    .shop-item {
+        flex-direction: column !important; 
+        align-items: center !important;    
+        gap: 20px !important;              
+        text-align: left !important;       
+        padding: 0 15px !important;        
+        box-sizing: border-box !important;
+        margin-bottom: 50px !important;    
+    }
+    .game-thumb, .shop-thumb, .others-thumb {
+        width: 200px !important;           
+        flex-shrink: 0 !important;
+    }
+    .game-detail, .shop-detail, .others-detail {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        /* ★ボタンを右に寄せるために親要素を制御 */
+        align-items: flex-end !important; 
+    }
+    .game-detail .price-tag, .shop-detail .price-tag, .others-detail .price-tag {
+        width: 100% !important;
+        text-align: left !important;       
+        font-size: 18px !important;
+        border-bottom: 1px solid #000000 !important;
+        padding-bottom: 4px !important;
+        margin-bottom: 12px !important;
+    }
+/* ★説明文テキストが右揃えにならないよう、100%幅で左テキストを維持 */
+    .game-detail p, .shop-detail p, .others-detail p {
+        width: 100% !important;
+        text-align: left !important;
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 15px !important;
+    }
+    .flex-reverse .btn-black {
+        float: none !important;            
+        align-self: flex-start !important; 
+    }
+    .btn-black {
+        display: inline-block !important;
+        width: auto !important;
+        padding: 10px 24px !important;
+        /* ★確実な右寄せのための余白調整 */
+        margin-left: auto !important; 
+        margin-right: 0 !important;
+    }
+    /* ─── 動画スクロール・グリッド ─── */
+    .movie-scroll-container .movie-item {
+        flex: 0 0 150px; /* スマホではコンパクトなスクロールに */
+    }
+    .movie-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; 
+        gap: 15px 10px !important;
+        padding: 0 10px !important;
+    }
+    .movie-grid .movie-item {
+        display: block !important; 
+    }
+    main:not(.movie-page-container) .section-block > .movie-grid .movie-item:nth-child(n+7) {
+        display: none !important;
+    }
+
+    /* ─── メインキャラクターカード（画像上・文字下・一列に縦並び） ─── */
+    .character-grid {
+        grid-template-columns: 1fr !important; 
+        gap: 50px 0px !important;              
+        padding: 0 15px !important;
+        box-sizing: border-box;
+    }
+    .character-card {
+        flex-direction: column !important; 
+        align-items: center !important;    
+        gap: 15px !important;              
+    }
+    .character-thumb-wrap {
+        width: 160px !important; 
+        flex-shrink: 0 !important;
+    }
+    .character-status {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    .char-price-row {
+        width: 100% !important;
+        justify-content: flex-end !important;
+        margin-bottom: 6px !important;
+    }
+    .char-table {
+        width: 100% !important;
+    }
+    .char-table th {
+        width: 28% !important;
+        padding: 8px 6px !important;
+    }
+    .char-table td {
+        padding: 8px 12px !important;
+        font-size: 13px !important; 
+    }
+
+    /* ─── オーディオ風ゲームUI ─── */
+    .game-playlist {
+        max-width: 500px; 
+    }
 }
