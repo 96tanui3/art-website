@@ -1,257 +1,219 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Summary site</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>96 Tanuki</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="header">
-  <br>　
-  <h1 class="logo">黒狸さんのまとめサイト</h1>
-  <br>　
+<header class="main-header">
+    <div class="header-inner">
+        <div class="logo-area">
+            <a href="index.html"><img src="image/ロゴ白.PNG" alt="96Tanuki" class="site-logo" loading="lazy"></a>
+        </div>
 
-  <!-- PC用ナビ -->
-  <nav class="nav">
-    <a href="index.html">TOP</a>
-    <a href="#creation">CREATION</a>
-    <a href="Game.html">GAME</a>
-    <a href="shop.html">SHOP</a>
-    <a href="Others.html">OTHERS</a>
-  </nav>
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
-  <!-- ハンバーガー（スマホ用） -->
-  <button class="menu-btn" id="menuBtn">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+        <nav class="global-nav">
+            <div class="nav-menu-box">
+                <div class="sp-menu-title">
+                    <h3>黒狸さんの作品<br>まとめサイト</h3>
+                    <div class="border-double">====================</div>
+                </div>
+
+                <ul>
+                    <li><a href="index.html">Home <span class="arrow-btn active">></span></a></li>
+                    <li><a href="#creation">Creation <span class="arrow-btn">></span></a></li>
+                    <li><a href="Game.html">Game <span class="arrow-btn">></span></a></li>
+                    <li><a href="Shop.html">Shop <span class="arrow-btn">></span></a></li>
+                    <li><a href="Others.html">Others <span class="arrow-btn">></span></a></li>
+                </ul>
+
+                <div class="sp-menu-sns">
+                    <div class="border-double">====================</div>
+                    <div class="sp-sns-links">
+                        <a href="https://x.com/plq2lmq5rbkb5eq?s=21" class="sns-circle-small"><img src="image/logo1.png" alt="X"></a>
+                        <a href="https://www.instagram.com/96tanuki3?igsh=MXV2azQwaHA2azJ4cg%3D%3D&utm_source=qr" class="sns-circle-small"><img src="image/logo2.png" alt="インスタ"></a>
+                        <a href="https://www.pixiv.net/users/100416662" class="sns-circle-small"><img src="image/logo3.png" alt="pixiv"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
 </header>
 
+    <main class="container">
+        
+        <section id="profile" class="section-block">
+            <h2 class="section-title">プロフィール<span class="en-sub">Profile</span></h2>
+            <div class="profile-card">
+                <div class="profile-thumb">
+                    <div class="img-frame shadow">
+                        <img src="image/プロフィール.jpeg" alt="プロフィール画像" loading="lazy">
+                    </div>
+                </div>
+                <div class="profile-status">
+                    <div class="status-meta-row">
+                    <div class="status-rating">
+                      <span class="rating-num">9.6</span>
+                      <span class="rating-stars">★★★★★★★★★★</span>
+                </div>
+                     <div class="status-price">¥1,980</div>
+                </div>
+                    <table class="status-table">
+                        <tr>
+                            <th>氏名</th>
+                            <td>黒狸さん</td>
+                        </tr>
+                        <tr>
+                            <th>活動内容</th>
+                            <td>一次創作</td>
+                        </tr>
+                        <tr>
+                            <th>活動場所</th>
+                            <td>主に X</td>
+                        </tr>
+                        <tr>
+                            <th>賞味期限</th>
+                            <td>██████████</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
 
-<!-- スライドメニュー -->
-<nav class="slide-menu" id="slideMenu">
+        <section id="about" class="section-block">
+            <h2 class="section-title">このサイトについて<span class="en-sub">About This Website</span></h2>
+            <div class="about-box">
+                <p>このサイトは、黒狸さんが制作した作品をまとめた WEB サイトです。</p>
+                <p>オリジナルキャラクターを中心に、イラストや漫画、小説、ゲーム、その他自分の作りたいと思ったものを制作しています。</p>
+                <p>無断転載・AI学習禁止。
+                <br class="en-text">No unauthorized reproduction or AI training.</p>
+            </div>
+        </section>
 
-  <button class="menu-close" id="menuClose">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+        <section id="creation" class="section-block">
+            <h2 class="section-title">一次創作<span class="en-sub">Creation</span></h2>
+            <div class="grid-5cols">
+                <div class="work-item">
+                    <a href="Creation_W.html"><div class="img-frame square"><img src="image/index_Creation1.png" alt="ワンダーランド" loading="lazy"></div></a>
+                    <p class="work-title">fuck you<br>ワンダーランド</p>
+                </div>
+                <div class="work-item">
+                    <a href="Creation_K.html"><div class="img-frame square"><img src="image/index_Creation2.png" alt="混血SFD" loading="lazy"></div></a>
+                    <p class="work-title">混血SFD</p>
+                </div>
+                <div class="work-item">
+                    <a href="Creation_S.html"><div class="img-frame square"><img src="image/index_Creation3.png" alt="それでも酸素は" loading="lazy"></div></a>
+                    <p class="work-title">それでも酸素は<br>薄かった</p>
+                </div>
+                <div class="work-item">
+                    <a href="Creation_M.html"><div class="img-frame square"><img src="image/index_Creation4.png" alt="MINDCORE" loading="lazy"></div></a>
+                    <p class="work-title">MINDCORE</p>
+                </div>
+                <div class="work-item">
+                    <a href="Creation_A.html"><div class="img-frame square"><img src="image/index_Creation5.png" alt="ANGEL" loading="lazy"></div></a>
+                    <p class="work-title">ANGEL</p>
+                </div>
+            </div>
+        </section>
 
-    <a href="index.html">TOP</a>
-    <a href="#creation">CREATION</a>
-      <a href="wonderland.html">　- fuck you ワンダーランド</a>
-      <a href="Konketusfd.html">　- 混血SFD</a>
-      <a href="Soredemo.html">　- それでも酸素は薄かった</a>
-      <a href="MINDCORE.html">　- MINDCORE</a>
-      <a href="ANGEL.html">　- ANGEL</a>
-    <a href="Game.html">GAME</a>
-    <a href="shop.html">SHOP</a>
-    <a href="Others.html">OTHERS</a>
-</nav>
+        <section id="game" class="section-block">
+            <h2 class="section-title">ゲーム<span class="en-sub">Game</span></h2>
+            <div class="flex-reverse">
+                <div class="game-thumb">
+                    <div class="img-frame square"><img src="image/index_game.jpg" alt="ゲーム" loading="lazy"></div>
+                </div>
+                <div class="game-detail">
+                    <div class="price-tag">¥0</div>
+                    <p>5〜15分でプレイできるノベルゲーム<br>一部ゲーム実況不可<br>ブラウザでもプレイ可能です</p>
+                    <a href="Game.html" class="btn-black">ゲーム一覧 ＞</a>
+                </div>
+            </div>
+        </section>
 
-<div class="slider" id="slider">
-  <div class="slides">
-    <div class="slide"><img src="　" alt="" loading="lazy"></div>
-    <div class="slide"><a href="ANGEL.html"><img src="image/Comics.jpg" alt="" loading="lazy"></a></div>
-    <div class="slide"><a href="Others.html"><img src="image/a_i.png" alt="" loading="lazy"></a></div>
-    <div class="slide"><a href="https://96tanuki3.booth.pm"><img src="image/BOOTH.jpg" alt="" loading="lazy"></a></div>
-  </div>
+        <section id="shop" class="section-block">
+            <h2 class="section-title">ショップ<span class="en-sub">Shop</span></h2>
+            
+            <div class="shop-item">
+                <div class="shop-thumb">
+                    <div class="img-frame square"><img src="image/index_shop.jpg" alt="グッズ" loading="lazy"></div>
+                </div>
+                <div class="shop-detail">
+                    <div class="price-tag">¥450〜1,800</div>
+                    <p>BOOTH・pixiv FANBOX・LINEスタンプについて<br>グッズや記事を購入できます</p>
+                    <a href="Shop.html" class="btn-black">ショップ一覧 ＞</a>
+                </div>
+            </div>
+        </section>
 
-  <!-- 矢印 -->
-  <button class="arrow prev" id="prev">←</button>
-  <button class="arrow next" id="next">→</button>
+        <section id="game" class="section-block">
+            <h2 class="section-title">その他の作品<span class="en-sub">Other works</span></h2>
+            <div class="flex-reverse">
+                <div class="game-thumb">
+                    <div class="img-frame square"><img src="image/index_other.png" alt="その他の作品" loading="lazy"></div>
+                </div>
+                <div class="game-detail">
+                    <div class="price-tag">¥0</div>
+                    <p>短編漫画とblenderで制作した作品<br>漫画は恋人未満の関係を描いています<br>blenderは勉強中</p>
+                    <a href="Others.html" class="btn-black">その他作品一覧 ＞</a>
+                </div>
+            </div>
+        </section>
 
-  <!-- ドット -->
-  <div class="dots" id="dots"></div>
-</div>
-
-
-<section class="about">
-  <h2>このサイトについて</h2>
-  <p>今まで作った一次創作をまとめています。</p>
-  <p>人外と人間が共存している世界観が好きです。
-    <br>漫画やゲームなど、ジャンル問わず幅広く作っています。
-  </p> 
-  <p>⚠︎ 無断転載・AI学習を禁止しています。
-    <br>⚠︎ No unauthorized reproduction or AI training.
-  </p>
+        <section id="sns" class="section-block">
+    <h2 class="section-title">SNS</h2>
+    <div class="sns-links">
+        
+        <a href="https://x.com/plq2lmq5rbkb5eq?s=21" class="sns-circle" target="_blank" rel="noopener noreferrer">
+            <img src="image/logo1.png" alt="X (旧Twitter)" loading="lazy">
+        </a>
+        
+        <a href="https://www.instagram.com/96tanuki3?igsh=MXV2azQwaHA2azJ4cg%3D%3D&utm_source=qr" class="sns-circle" target="_blank" rel="noopener noreferrer">
+            <img src="image/logo2.png" alt="Instagram" loading="lazy">
+        </a>
+        
+        <a href="https://www.pixiv.net/users/100416662" class="sns-circle" target="_blank" rel="noopener noreferrer">
+            <img src="image/logo3.png" alt="pixiv" loading="lazy">
+        </a>
+        </div>
 </section>
 
-<div class="news">
-  <br>　
-  <b>サイト情報</b>
-  <hr>
-  <br><b>5/11</b> 
-  <br>OTHERSにblender作品を追加しました。
-  <br>ペーナッツくん！の画像を修正しました。
-  <br>ANGELのLINEスタンプがSHOPに追加されました。
-  <br>　
-</div>
-  
+    </main>
 
-<!-- 一覧 -->
-<section class="works">
-  <div class="work">
-    <h2>ゲーム</h2>
-    <div class="thumb">
-    <img src="image/game.png" alt="ゲーム一覧" loading="lazy"></div>
-    <a class="btn" href="Game.html">　　MORE ▶︎　　</a>
-  </div>
-  
-</section>
+    <footer class="main-footer">
+        <div class="footer-inner">
+            <div class="receipt-area">
+                <div class="receipt-logo">
+                    <div class="img-frame square footer-logo-frame"><img src="image/ロゴ.PNG" alt="ミニロゴ" loading="lazy"></div>
+                </div>
+                <div class="receipt-calc">
+                    <table class="receipt-table">
+                        <tr>
+                            <th>合計</th>
+                            <td>¥4,730</td>
+                        </tr>
+                        <tr>
+                            <th>お預かり</th>
+                            <td>¥5,230</td>
+                        </tr>
+                        <tr>
+                            <th>お釣り</th>
+                            <td>¥500</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="copyright">© 2026 黒狸さん</div>
+        </div>
+    </footer>
 
-<!-- 創作 -->
-<section class="character-section">
-  <h2 class="character-title">一次創作</h2>
-<section class="character-grid" id="creation">
-  <a href="wonderland.html" class="character-item">
-    <div class="character-thumb">
-      <img src="image/a_w.png" alt="ワンダーランド" loading="lazy">
-    </div>
-    <p class="character-name"><b>fuck you<br>ワンダーランド</b></p>
-  </a>
-
-  <a href="Konketusfd.html" class="character-item">
-    <div class="character-thumb">
-      <img src="image/a_k.png" alt="混血SFD" loading="lazy">
-    </div>
-    <p class="character-name"><b>混血SFD</b></p>
-  </a>
-
-  <a href="Soredemo.html" class="character-item">
-    <div class="character-thumb">
-      <img src="image/a_s.png" alt="それでも酸素は" loading="lazy">
-    </div>
-    <p class="character-name"><b>それでも酸素は<br>薄かった</b></p>
-  </a>
-
-  <a href="MINDCORE.html" class="character-item">
-    <div class="character-thumb">
-      <img src="image/a_m.png" alt="マインドコア" loading="lazy">
-    </div>
-    <p class="character-name"><b>MINDCORE</b></p>
-  </a>
-
-  <a href="ANGEL.html" class="character-item">
-    <div class="character-thumb">
-      <img src="image/a_a.png" alt="ANGEL" loading="lazy">
-    </div>
-    <p class="character-name"><b>ANGEL</b></p>
-  </a>
-</section>
-
-<!-- ショップ -->
-<section class="works">
-  <div class="work">
-    <h2>ショップ</h2>
-    <div class="thumb">
-    <img src="image/BOOTH.jpg" alt="ショップ" loading="lazy"></div>
-    <a class="btn" href="shop.html">　　MORE ▶︎　　</a>
-  </div>
-
-  <div class="work">
-    <br>　
-    <h2>単発作品</h2>
-    <div class="thumb">
-    <img src="image/a_i.png" alt="単発作品" loading="lazy"></div>
-    <a class="btn" href="Others.html">　　MORE ▶︎　　</a>
-  </div>
-</section>
-
-
-<!-- sns -->
-<section class="sns">
-  <h2>SNS</h2>
-  <div class="sns-links">
-    <a href="https://x.com/plq2lmq5rbkb5eq?s=21">X</a>
-    <a href="https://www.instagram.com/96tanuki3?igsh=MXV2azQwaHA2azJ4cg%3D%3D&utm_source=qr">Instagram</a>
-    <a href="https://www.pixiv.net/users/100416662">pixiv</a>
-  </div>
-</section>
-
-<script>
-  const slides = document.querySelector(".slides");
-  const slideCount = document.querySelectorAll(".slide").length;
-  const prev = document.getElementById("prev");
-  const next = document.getElementById("next");
-  const dotsContainer = document.getElementById("dots");
-
-  let index = 0;
-  let interval;
-
-  /* ===== ドット生成 ===== */
-  for (let i = 0; i < slideCount; i++) {
-    const dot = document.createElement("div");
-    dot.classList.add("dot");
-    if (i === 0) dot.classList.add("active");
-    dot.addEventListener("click", () => {
-      index = i;
-      updateSlide();
-      resetAutoSlide();
-    });
-    dotsContainer.appendChild(dot);
-  }
-
-  const dots = document.querySelectorAll(".dot");
-
-  function updateSlide() {
-    slides.style.transform = `translateX(-${index * 100}%)`;
-    dots.forEach(dot => dot.classList.remove("active"));
-    dots[index].classList.add("active");
-  }
-
-  /* ===== 次へ ===== */
-  next.addEventListener("click", () => {
-    index = (index + 1) % slideCount;
-    updateSlide();
-    resetAutoSlide();
-  });
-
-  /* ===== 前へ ===== */
-  prev.addEventListener("click", () => {
-    index = (index - 1 + slideCount) % slideCount;
-    updateSlide();
-    resetAutoSlide();
-  });
-
-  /* ===== 自動スライド ===== */
-  function startAutoSlide() {
-    interval = setInterval(() => {
-      index = (index + 1) % slideCount;
-      updateSlide();
-    }, 4000);
-  }
-
-  function resetAutoSlide() {
-    clearInterval(interval);
-    startAutoSlide();
-  }
-
-  startAutoSlide();
-</script>
-
-<script>
-  
-  const btn = document.getElementById("menuBtn");
-  const menu = document.getElementById("slideMenu");
-
-  const closeBtn = document.getElementById("menuClose");
-
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("active");
-  });
-
-  closeBtn.addEventListener("click", () => {
-    menu.classList.remove("active");
-  });
-</script>
-
-
-<!-- <script src="script.js"></script> -->
 </body>
 </html>
-
