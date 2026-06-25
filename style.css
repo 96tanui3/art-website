@@ -1,0 +1,1078 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.btn-black {
+    display: inline-block;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 30px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+    text-align: center;
+    border: 2px solid #000000; 
+    box-sizing: border-box;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-black:hover {
+    background-color: #ffffff;  
+    color: #000000;           
+    transform: translate(-4px, -4px); 
+    box-shadow: 4px 4px 0px #000000; 
+}
+
+/* ==========================================================================
+   画像枠（フレーム）の共通設定
+   ========================================================================== */
+.img-frame {
+    background-color: #ffffff; 
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+}
+
+.img-frame.square {
+    aspect-ratio: 1 / 1;
+}
+
+.img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.img-frame.shadow {
+    border: 1px solid #000000;
+    box-shadow: 6px 6px 0px #000000;
+}
+
+.footer-logo-frame {
+    border: 1px solid #ffffff;
+    background-color: #333333;
+}
+
+/* ==========================================================================
+   ヘッダー（共通・PC表示ベース）
+   ========================================================================== */
+.main-header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 60px 20px 40px 20px; 
+    position: relative;        
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+body {
+    padding-top: 0;
+}
+
+.header-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-area {
+    margin-top: 10px;    
+    margin-bottom: 60px;  
+}
+
+.site-logo {
+    max-width: 260px;    
+    height: auto;
+    display: block;
+}
+
+.global-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;           
+}
+
+.global-nav a {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    padding: 4px 12px;          
+    border-radius: 2px;         
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.global-nav a:hover {
+    background-color: #ffffff;  
+    color: #000000;             
+}
+
+.menu-checkbox, .menu-btn, .sp-menu-title, .sp-menu-sns, .arrow-btn {
+    display: none;
+}
+
+
+/* ==========================================================================
+   各セクション共通
+   ========================================================================== */
+.section-block {
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title .en-sub {
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+    color: #666666;
+    margin-top: 2px;
+}
+
+/* ==========================================================================
+   プロフィール
+   ========================================================================== */
+.profile-card {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.profile-thumb {
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.profile-status {
+    flex: 1;
+}
+
+.status-price {
+    text-align: right;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.status-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #000000;
+}
+
+.status-table th, .status-table td {
+    border: 1px solid #000000;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.status-table th {
+    background-color: #000000;
+    color: #ffffff;
+    width: 35%;
+    text-align: center;
+    font-weight: normal;
+}
+
+.status-table td {
+    background-color: #ffffff;
+}
+
+.status-meta-row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-end;         
+    margin-bottom: 6px;  
+}
+
+.status-rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;  
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333; 
+}
+
+.rating-num {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.rating-stars {
+    letter-spacing: -1px; 
+}
+
+/* ==========================================================================
+   このサイトについて
+   ========================================================================== */
+.about-box {
+    border: 2px solid #000000;
+    padding: 25px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.about-box p {
+    margin: 0 0 1em 0;
+}
+.about-box p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==========================================================================
+   一次創作（5カラムグリッド）
+   ========================================================================== */
+.grid-5cols {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    gap: 20px;
+    justify-content: center;
+}
+
+.grid-5cols .img-frame {
+    aspect-ratio: 3 / 4;
+}
+
+.work-item {
+    text-align: center;
+}
+
+.work-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 8px;
+    line-height: 1.3;
+}
+
+.grid-5cols .img-frame {
+    outline: 0px solid #000000;
+    transition: outline 0.1s ease;
+}
+
+.grid-5cols .work-item:hover .img-frame {
+    outline: 3px solid #000000;
+}
+
+/* ==========================================================================
+   ゲーム / ショップ / その他（レイアウト共通パターン）
+   ========================================================================== */
+.flex-container, .flex-reverse, .shop-item {
+    display: flex;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+}
+
+.flex-reverse {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.game-thumb, .shop-thumb, .others-thumb {
+    width: 230px;
+    flex-shrink: 0;
+}
+
+.game-detail, .shop-detail, .others-detail {
+    flex: 1;
+}
+
+.price-tag {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 2px;
+    margin-bottom: 10px;
+}
+
+.game-detail p, .shop-detail p, .others-detail p {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+}
+
+.flex-reverse .btn-black {
+    float: right; 
+}
+
+/* ==========================================================================
+   SNS（丸型画像対応版）
+   ========================================================================== */
+.sns-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.sns-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #cccccc;       
+    border-radius: 50%; 
+    overflow: hidden; 
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.sns-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.sns-circle:hover {
+    transform: scale(1.08); 
+}
+
+/* ==========================================================================
+   フッター（レシート風）
+   ========================================================================== */
+.main-footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 40px 20px 20px 20px;
+}
+
+.footer-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.receipt-area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.receipt-logo {
+    width: 120px;
+}
+
+.receipt-calc {
+    width: 200px;
+}
+
+.receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.receipt-table th, .receipt-table td {
+    padding: 4px 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.receipt-table th {
+    text-align: left;
+}
+
+.receipt-table td {
+    text-align: right;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 11px;
+    border-top: 1px solid #333333;
+    padding-top: 20px;
+    color: #888888;
+}
+
+/* ==========================================================================
+   Creation ページ専用レイアウト設定
+   ========================================================================== */
+.main-work-title {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+.world-intro-box {
+    border: 2px solid #0b5e28; 
+    padding: 25px;
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+}
+.world-intro-box p {
+    margin: 0 0 8px 0;
+}
+.world-intro-box p:last-of-type {
+    margin-bottom: 0;
+}
+
+.creation-flex-item {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    align-items: flex-start;
+}
+.creation-thumb {
+    width: 200px;
+    flex-shrink: 0;
+}
+.manga-aspect .img-frame {
+    aspect-ratio: 3 / 4; 
+}
+.creation-detail {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.creation-detail .price-tag {
+    text-align: right;
+    width: 100%;
+}
+
+.work-sub-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+.work-desc {
+    font-size: 14px;
+    margin: 0 0 20px 0;
+    line-height: 1.5;
+}
+
+.Creation_A {
+    color: #d5045c;
+}
+.Creation_A:hover {
+    color: #870834;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Movie（動画グリッド ＆ 折りたたみアコーディオン）
+   ========================================================================== */
+/* 年ごとのセクションの隙間 */
+.movie-year-section {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+/* 「2026」などの年号タイトル（サイト全体のフォントに合わせて太字・左寄せ） */
+.year-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0 0 12px 20px; /* 左側に少し余白を入れて内側に寄せます */
+    text-align: left;
+}
+
+.movie-scroll-container {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 0 20px 15px 20px; /* 左右に余白を作り、下にスクロールバー用の隙間を空ける */
+    box-sizing: border-box; 
+    /* スマホで指を離した後も滑らかにスクロールさせる設定 */
+    -webkit-overflow-scrolling: touch;
+}
+
+.movie-scroll-container::-webkit-scrollbar {
+    height: 4px; /* バーの太さ */
+}
+.movie-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* バーの背景（薄いグレー） */
+}
+.movie-scroll-container::-webkit-scrollbar-thumb {
+    background: #474747; /* バー本体（黒猫さんのサイトに合わせたパキッとした黒） */
+}
+
+.movie-scroll-container .movie-item {
+    flex: 0 0 180px; /* パソコンでもスマホでも、1個あたり「幅130px」でガチッと固定します */
+    text-align: center;
+}
+
+.movie-scroll-container .img-frame.square {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 8px;
+}
+
+.movie-scroll-container .movie-item p {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.3;
+    white-space: normal;
+    margin: 0;
+}
+
+
+.movie-scroll-container .img-frame.square {
+    overflow: hidden;
+}
+.movie-scroll-container .img-frame.square img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; 
+}
+.movie-scroll-container .movie-item:hover .img-frame.square img {
+    transform: scale(1.1); 
+}
+
+/* ==========================================================================
+   Main character（キャラクターリスト：2カラム）
+   ========================================================================== */
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px 30px;
+    max-width: 850px; 
+    margin: 0 auto;
+}
+
+.character-card {
+    display: flex;
+    gap: 20px;       
+    text-align: left;
+    align-items: flex-end;
+}
+
+.character-thumb-wrap {
+    width: 140px;      
+    flex-shrink: 0;
+}
+
+.character-thumb-wrap .img-frame.square.shadow {
+    aspect-ratio: 1 / 1;
+    box-shadow: 6px 6px 0px #000000;
+}
+
+.character-status {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+}
+
+.char-price-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 8px; 
+    width: 100%;
+}
+
+.char-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #000000; 
+    height: auto;
+}
+
+.char-table th, .char-table td {
+    border: 1px solid #000000;
+    padding: 6px 10px; 
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.char-table th {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    width: 25%; 
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.char-table td {
+    background-color: #ffffff;
+}
+
+/* 🎬 動画アイテムのホバーアニメーション（画像ズーム） */
+.movie-grid .movie-item .img-frame {
+    overflow: hidden; /* 枠からはみ出た画像を隠す */
+    cursor: pointer;
+}
+
+.movie-grid .movie-item .img-frame img {
+    transition: transform 0.3s ease; /* ズームの速度（0.3秒） */
+}
+
+/* マウスが乗ったとき（:hover）に画像を1.1倍に大きくする */
+.movie-grid .movie-item:hover .img-frame img {
+    transform: scale(1.1);
+}
+
+
+
+
+/* ==========================================================================
+   Gameセクション（新デザイン：プレイボタン付き）
+   ========================================================================== */
+.game-playlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+    max-width: 680px; /* スマホ・PCどちらでも綺麗に収まるサイズ */
+    margin: 0 auto 40px auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.game-track-item {
+    width: 100%;
+    text-align: center;
+}
+
+/* ゲーム画像（16:9） */
+.game-track-thumb {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.game-track-thumb .img-frame {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    background-color: #cccccc;
+}
+
+/* ゲームタイトル */
+.game-track-title {
+    font-size: 19px;
+    font-weight: bold;
+    margin: 0 0 12px 0;
+    color: #000000;
+}
+
+/* 🎵 プレーヤーUI */
+.audio-player-ui {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.player-seekbar {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.seekbar-line {
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+}
+.seekbar-pointer {
+    position: absolute;
+    left: 35%;
+    width: 8px;
+    height: 8px;
+    background-color: #000000;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+.player-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.player-btn svg {
+    width: 100%;
+    height: 100%;
+    fill: #000000;
+}
+
+/* 🧾 詳細テキストとボタンを左右に分ける設定 */
+.game-track-footer {
+    display: flex;
+    justify-content: space-between; /* 左に説明、右にボタン */
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.game-track-meta {
+    flex: 1;
+    padding-right: 15px;
+}
+.game-track-meta p {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.6;
+    margin: 0 0 4px 0;
+}
+
+
+@media screen and (max-width: 768px) {
+.creation-flex-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .creation-thumb {
+        width: 180px;
+    }
+    .creation-price-row {
+        justify-content: center;
+    }
+    .price-line {
+        display: none;
+    }
+
+ .movie-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; 
+        gap: 15px 10px !important;
+        padding: 0 10px !important;
+    }
+    .movie-grid .movie-item {
+        display: block !important; /* 基本はスマホでも全部表示する */
+    }
+    main:not(.movie-page-container) .section-block > .movie-grid .movie-item:nth-child(n+7) {
+        display: none !important;
+    }
+    
+    .character-grid {
+        grid-template-columns: 1fr; 
+        gap: 35px;
+        padding: 0 15px;
+    }
+    .character-card {
+        align-items: center; 
+        flex-direction: row; 
+    }
+    .character-thumb-wrap {
+        width: 160px;
+    }
+
+    .creation-flex-item {
+        display: flex !important;
+        flex-direction: row !important;   
+        align-items: flex-end !important; 
+        text-align: left !important;
+        gap: 20px !important;             
+        justify-content: space-between !important;
+        width: 100% !important;
+        padding: 0 10px !important;       
+        box-sizing: border-box !important;
+    }
+    .creation-thumb {
+        width: 160px !important;         
+        flex-shrink: 0 !important;
+    }
+    .creation-info-block {
+        flex: 1 !important;                
+        min-width: 0 !important;          
+    }
+    .creation-price-row {
+        justify-content: flex-end !important; 
+    }
+    .price-line {
+        display: block !important;            
+    }
+
+    .grid-5cols {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;                             
+        padding: 0 10px;                      
+    }
+
+    .work-title {
+        font-size: 17px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+    .section-title .en-sub {
+        font-size: 13px;
+    }
+
+    .status-table th, .status-table td,
+    .about-box,
+    .game-detail p, .shop-detail p, .others-detail p {
+        font-size: 15px; 
+    }
+    
+    .status-rating {
+        font-size: 16px;
+    }
+    .status-price {
+        font-size: 22px;
+    }
+
+    body {
+        padding-top: 100px; 
+        font-size: 18px;
+    }
+
+    .main-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 20px;
+    }
+
+    .header-inner {
+        flex-direction: row;   
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .logo-area {
+        margin-bottom: 0;
+    }
+    .site-logo {
+        max-width: 180px;
+    }
+
+    .menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    .menu-btn span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #ffffff;
+        transition: all 0.3s ease;
+    }
+
+    .global-nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        transition: right 0.3s ease;
+        z-index: 1050;
+    }
+
+    .nav-menu-box {
+        position: absolute;
+        top: 90px;
+        right: 20px;
+        background-color: #ffffff;
+        color: #000000;
+        width: 280px;
+        padding: 20px;
+        border: 2px solid #000000;
+        box-shadow: 8px 8px 0px #000000;
+        box-sizing: border-box;
+    }
+
+    .menu-checkbox:checked ~ .global-nav {
+        right: 0;
+    }
+
+    .menu-checkbox:checked ~ .menu-btn span:nth-child(1) {
+        transform: translateY(8.5px) rotate(45deg);
+    }
+    .menu-checkbox:checked ~ .menu-btn span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-checkbox:checked ~ .menu-btn span:nth-child(3) {
+        transform: translateY(-8.5px) rotate(-45deg);
+    }
+
+    .sp-menu-title, .sp-menu-sns {
+        display: block;
+        text-align: center;
+    }
+    .sp-menu-title h3 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.3;
+    }
+    .border-double {
+        font-size: 12px;
+        color: #000000;
+        margin: 10px 0;
+        letter-spacing: -1px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .global-nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 5px 0;
+    }
+    .global-nav ul li {
+        width: 100%;
+        border-bottom: 1px solid #eeeeee;
+    }
+    .global-nav ul li:last-child {
+        border-bottom: none;
+    }
+    .global-nav a {
+        color: #000000;
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+.global-nav ul li a {
+    transition: padding-left 0.2s ease;
+}
+.global-nav ul li a .arrow-btn {
+    transition: transform 0.2s ease, background-color 0.2s, color 0.2s;
+}
+
+.global-nav ul li a:hover {
+    padding-left: 8px; 
+}
+
+.global-nav ul li a:hover .arrow-btn {
+    transform: scale(1.05) translateX(-5px); 
+}
+
+.global-nav ul li a:hover .arrow-btn:not(.active) {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+    .arrow-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 22px;
+        border: 1px solid #000000;
+        border-radius: 12px;
+        font-size: 14px;
+        background-color: #ffffff;
+    }
+    .arrow-btn.active {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .sp-menu-sns .sp-sns-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 5px;
+    }
+     .global-nav .sp-sns-links a {
+    width: 65px;
+    height: 45px;
+    aspect-ratio: 1 / 1;      
+    background-color: #000000; 
+    border-radius: 0;          
+    overflow: hidden;
+    display: block;
+    transform: none;       
+    transition: opacity 0.2s ease;
+}
+
+/* 中に入っているロゴ画像の設定 */
+.global-nav .sp-sns-links a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;      
+    background-color: #000000;
+    display: block;
+}
+
+
+.global-nav .sp-sns-links a:hover {
+    transform: none;          
+    opacity: 0.7;            
+}
+
+.game-thumb, .shop-thumb, .others-thumb {
+    width: 180px;
+}
+
+.game-playlist {
+    max-width: 500px; /* スマホ・PCどちらでも綺麗に収まるサイズ */
+}
+
+.movie-scroll-container .movie-item {
+    flex: 0 0 150px;
+}
+    .work-title { font-size: 14px; margin-top: 10px; }
+    .section-title { font-size: 28px; }
+    .section-title .en-sub { font-size: 13px; }
+    .status-table th, .status-table td, .about-box, .game-detail p, .shop-detail p, .others-detail p { font-size: 15px; }
+    .status-rating { font-size: 16px; }
+    .status-price { font-size: 22px; }
+}
