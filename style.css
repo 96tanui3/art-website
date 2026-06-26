@@ -973,7 +973,7 @@ a {
 
     /* ─── 一次創作イラスト（3列グリッド） ─── */
     .grid-5cols {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 12px;                             
         padding: 0 10px;                      
     }
@@ -1062,7 +1062,7 @@ a {
     }
     /* ─── 動画スクロール・グリッド ─── */
     .movie-scroll-container .movie-item {
-        flex: 0 0 150px; /* スマホではコンパクトなスクロールに */
+        flex: 0 0 150px; 
     }
     .movie-grid {
         display: grid !important;
@@ -1075,6 +1075,19 @@ a {
     }
     main:not(.movie-page-container) .section-block > .movie-grid .movie-item:nth-child(n+7) {
         display: none !important;
+    }
+
+    /* スクロールバー全体の幅・高さ */
+    .movie-scroll-container::-webkit-scrollbar {
+    height: 6px !important; /* バーの太さ */
+    display: block !important; /* スマホでも強制表示 */
+    }
+    .movie-scroll-container::-webkit-scrollbar-track {
+    background: #eeeeee !important;
+    }
+    .movie-scroll-container::-webkit-scrollbar-thumb {
+    background: #000000 !important;
+    border-radius: 3px;
     }
 
     /* ─── メインキャラクターカード（画像上・文字下・一列に縦並び） ─── */
