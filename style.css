@@ -1077,19 +1077,6 @@ a {
         display: none !important;
     }
 
-    /* スクロールバー全体の幅・高さ */
-    .movie-scroll-container::-webkit-scrollbar {
-    height: 6px !important; /* バーの太さ */
-    display: block !important; /* スマホでも強制表示 */
-    }
-    .movie-scroll-container::-webkit-scrollbar-track {
-    background: #eeeeee !important;
-    }
-    .movie-scroll-container::-webkit-scrollbar-thumb {
-    background: #000000 !important;
-    border-radius: 3px;
-    }
-
     /* ─── メインキャラクターカード（画像上・文字下・一列に縦並び） ─── */
     .character-grid {
         grid-template-columns: 1fr !important; 
