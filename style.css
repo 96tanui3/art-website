@@ -64,7 +64,7 @@ a {
    Image Frames（画像枠の共通設定）
    ========================================================================== */
 .img-frame {
-    background-color: #ffffff; 
+    background-color: #ffffff00; 
     position: relative;
     overflow: hidden;
     display: block;
